@@ -53,11 +53,11 @@
 // the output of the division with the expected result. (Inlining must be
 // disabled.)
 // On Linux,x86 89255e-22 != Div_double(89255.0/1e22)
-#define __x86_64__
 #if defined(_M_X64) || defined(__x86_64__) || \
     defined(__ARMEL__) || defined(__avr32__) || \
     defined(__hppa__) || defined(__ia64__) || \
     defined(__mips__) || \
+    defined(__EMSCRIPTEN__) || \
     defined(__powerpc__) || defined(__ppc__) || defined(__ppc64__) || \
     defined(_POWER) || defined(_ARC_PPC) || \
     defined(__sparc__) || defined(__sparc) || defined(__s390__) || \
